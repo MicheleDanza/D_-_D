@@ -8,8 +8,9 @@ use Illuminate\Support\Facades\Http;
 
 class ApiController extends Controller
 {
+        
     public function index(){
-        $response = HTTP::get('https://www.dnd5eapi.co/api')->json();
+         $response = HTTP::get('https://www.dnd5eapi.co/api')->json();
         $abilityScores = HTTP::get('https://www.dnd5eapi.co' . $response['ability-scores'])->json();
 
         $abilities = Arr::map($abilityScores['results'],function($ability){

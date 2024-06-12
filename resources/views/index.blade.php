@@ -2,9 +2,9 @@
   <table class="table">
     <thead>
       <tr>
-        @foreach ($abilityScores['results'] as $item)
+        @foreach ($abilityScores['results'] as $abilityScore)
         <th scope="row">
-          {{$item['name']}}
+          {{$abilityScore['name']}}
         </th>
           @endforeach
       </tr>
@@ -13,14 +13,19 @@
       <tr>
         @foreach($array as $item)
         <td>
-          <ul>
+          <h6>Nome</h6>
             <li>{{$item['full_name']}}</li>
-                @foreach($item['desc'] as $desc)
-                   <li>{{$desc}}</li>
-                @endforeach
-                @foreach($item['skills'] as $skill)
-                  <li>{{$skill['name']}}</li>
-                @endforeach
+          <h6>Descrizione</h6>
+          <ul>
+          @foreach($item['desc'] as $desc)
+            <li>{{$desc}}</li>
+          @endforeach
+        </ul>
+          <h6>Skills</h6>
+          <ul>
+            @foreach($item['skills'] as $skill)
+            <li>{{$skill['name']}}</li>
+            @endforeach
           </ul>
         </td>
         @endforeach
