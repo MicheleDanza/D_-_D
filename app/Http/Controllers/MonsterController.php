@@ -21,10 +21,13 @@ class MonsterController extends Controller
         return view ('monster.index',compact('monsters'));
     }
 
-    // public function showMonster($index){
-    //     $response = HTTP::get('https://www.dnd5eapi.co/api/monsters/'.$index)->json();
-    //     $monster = $response;
-    //     return view ('monster.show', compact('monster'));
-    // }
+    public function showMonster($index){
+        $response = HTTP::get('https://www.dnd5eapi.co/api/monsters/'.$index)->json();
+        $monster = $response;
+
+        // $monsterImg = 'https://www.dnd5eapi.co'.$monster['image'];
+
+        return view ('monster.show', compact('monster'));
+    }
     
 }

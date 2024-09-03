@@ -10,10 +10,19 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('index')}}">Abilità</a>
+            <a class="nav-link" href="{{route('index')}}">Ability</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('monsters')}}">Monsters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('classes')}}">Classes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('alignments')}}">Alignments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('conditions')}}">Conditions</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -26,9 +35,7 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Link</a>
-          </li>
+        
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
